@@ -1,0 +1,39 @@
+Q) write a program for sigle level inheritance
+
+Ans)
+
+#include <iostream>
+using namespace std;
+
+
+class Human
+{
+
+//propertise
+protected:        
+string name;
+
+};
+class Student : public Human
+{
+int roll_no;
+
+public:
+Student(string n, int a)
+{
+name =n;
+roll_no=a;
+
+}
+
+void display()
+{
+cout<<name<< " "<<roll_no;
+}
+};
+int main ()
+{
+Student obj("messi", 10);
+obj.display();
+
+}
