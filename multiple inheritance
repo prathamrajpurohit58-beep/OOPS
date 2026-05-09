@@ -1,0 +1,49 @@
+Q) write a program for multiple level inheritance
+
+Ans)
+
+
+#include <iostream>
+using namespace std;
+
+
+class Person
+{
+
+protected:         
+string name;
+int age;
+
+};
+
+class Human
+{protected:
+int marks;
+};
+
+class Student : public Human, public Person
+{
+int roll_no;
+
+public:
+Student(string n,int a,int b, int r)
+{
+name =n;
+age=a;
+marks=b;
+roll_no=r;
+
+}
+
+void display()
+{
+cout<<name<< " "<<age<<" "<<marks<<" "<<roll_no;
+}
+
+};
+int main ()
+{
+Student obj("messi",100, 36,10);
+obj.display();
+
+}
