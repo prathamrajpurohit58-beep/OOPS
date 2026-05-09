@@ -1,0 +1,69 @@
+Q) write a program of hierarchical inheritance
+
+Ans)
+
+
+#include <iostream>
+using namespace std;
+
+
+class Person
+{
+
+//propertise
+
+string name;
+
+
+};
+
+class Student: public Person
+{protected:
+int fees;
+public:
+Student(string n, int f)
+
+{
+name=n;
+fees=f;
+
+}
+void display()
+
+{
+
+     cout<<"Student name is:  "<<name<<endl;
+    cout<<"Fees is:  "<<fees<<endl<<endl;
+}
+
+};
+
+class Teacher :  public Person
+{
+ protected:
+int salary;
+
+public:
+Teacher(string n,int s)
+{
+name =n;
+salary=s;
+
+}
+void display()
+
+{
+    cout<<"Teacher name is:  "<<name<<endl;
+    cout<<"Salary is:  "<<salary;
+}
+
+
+};
+int main ()
+{
+    Student obj("messi",2000);
+    Teacher obj1("pep",3000);
+ obj.display();
+ obj1.display();
+
+}
